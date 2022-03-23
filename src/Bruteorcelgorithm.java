@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Bruteorcelgorithm {
     // constructor
     public Bruteorcelgorithm() {
@@ -14,7 +16,6 @@ public class Bruteorcelgorithm {
             "", "", "", "", "", "", "", "", "" };
 
     public void decryption(String[] Cipher) {
-        bruteForce[0] = "";
         plaintext = new String[Cipher.length];
         for (int k = 0; k < 26; k++) {
             for (int i = 0; i < Cipher.length; i++) {
@@ -45,8 +46,11 @@ public class Bruteorcelgorithm {
             }
         }
         printBruteForce();
+        //erase data from array 
+        for(int i=0;i<bruteForce.length;i++ ){
+            bruteForce[i]="";
+        }
     }
-
     public void printBruteForce() {
 
         for (int i = 0; i < 26; i++) {
